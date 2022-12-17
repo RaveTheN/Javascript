@@ -2,9 +2,9 @@ function nicknameMap(persons) {
 
   let nicknames = []
 
-for (let i = 0; i < persons.length; i++){
+for (let subObject of persons){
     
-    let subObject = Object(persons[i])
+    
     let entries = Object.entries(subObject);
 
     nicknames.push(entries[0][1] + "-" + entries[1][1])    
