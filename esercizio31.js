@@ -15,7 +15,11 @@ const person1 = {
     }
 };
 
-const person2 = { ...person1 };
+let str = JSON.stringify(person1);
+let generalPerson = JSON.parse(str);
+
+const person2 = { ...generalPerson};
+
 person2.address.city = 'Milan';
 
 console.log(person1);
