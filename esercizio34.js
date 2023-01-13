@@ -4,11 +4,13 @@
 
 //The callback function must be an arrow function, can you also explain why?
 
-function printAsyncName(callback, name){
-    setTimeout(callback, 1000);
-    setTimeout(() => 
-        console.log(name), 2000)
-}
+let printHello = () => console.log("Hello");
 
-printAsyncName(() => console.log("Hello"), "Mario");
+function printAsyncName(callback, name){
+        setTimeout(callback, 1000);
+        setTimeout(() => 
+            console.log(name), 2000)
+    }
+
+printAsyncName(printHello,"Mario");
 
