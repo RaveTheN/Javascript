@@ -4,6 +4,10 @@
 
 //The callback function must be an arrow function, can you also explain why?
 
+//"Arrow functions (AF) are easier to use and are lexically bound reagardless of where and when they are invoked" > https://eslint.org/docs/latest/rules/prefer-arrow-callback
+//AF are bounded to the "this" of the function in which it is enclosed, and since setTimeout breaks the flow of the script, with AF we can pass it
+//that argument even if the flow is ahead of the moment it actually executes.
+
 let printHello = () => console.log("Hello");
 
 function printAsyncName(callback, name){
@@ -13,4 +17,3 @@ function printAsyncName(callback, name){
     }
 
 printAsyncName(printHello,"Mario");
-
