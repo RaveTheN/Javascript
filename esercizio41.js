@@ -7,6 +7,6 @@ const user = {
     age: 25,
 }
 
-localStorage.setItem('user', user);
+localStorage.setItem('user', JSON.stringify(user));
 
-console.log(localStorage.getItem('user'));
+console.log(JSON.parse(localStorage.getItem('user')));
